@@ -17,7 +17,8 @@ import {
   Mail as MailIcon,
   MoveToInbox as InboxIcon,
   Home as HomeIcon,
-  Event as EventIcon
+  Event as EventIcon,
+  BugReport as BugReportIcon
 } from '@material-ui/icons'
 
 
@@ -27,7 +28,10 @@ const routeGroup = [
   ],
   [
     { name: 'Calendar', to: '/calendar', icon: <EventIcon /> },
-  ]
+  ],
+  [
+    { name: 'Debug', to: '/debug', icon: <BugReportIcon /> },
+  ],
 ]
 
 const SideBar = ({
@@ -63,8 +67,8 @@ const SideBar = ({
           {key !== 0 && <Divider />}
 
           {group.map(({name, to, icon}) =>
-            <Link href={to}>
-              <ListItem button key={name}>
+            <Link href={to} key={name}>
+              <ListItem button>
                 <ListItemIcon>{icon}</ListItemIcon>
                 <ListItemText primary={name} />
               </ListItem>
