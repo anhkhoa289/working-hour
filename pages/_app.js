@@ -1,8 +1,10 @@
 import React from 'react'
 import App from 'next/app'
+import LayoutDefault from '../components/layout/Default'
 
 import '@fullcalendar/core/main.css'
 import '@fullcalendar/daygrid/main.css'
+
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -20,12 +22,9 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <>
-        <header>
-          header
-        </header>
+      <LayoutDefault>
         <Component {...pageProps} />
-      </>
+      </LayoutDefault>
     )
   }
 }

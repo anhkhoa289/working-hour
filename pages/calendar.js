@@ -5,7 +5,7 @@ const FullCalendar = dynamic(
   () => import('../components/Calendar'),
   {
     ssr: false,
-    loading: () => <p>Loading Toggle</p> 
+    loading: () => <p>Loading Calendar</p> 
   }
 )
 
